@@ -23,15 +23,19 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(turtle1_one_line_node src/turtle1_one_line_node.cpp)
-ament_target_dependencies(turtle1_one_line_node rclcpp geometry_msgs turtlesim)
+add_executable(turtle1_line_node src/turtle1_line_node.cpp)
+ament_target_dependencies(turtle1_line_node rclcpp geometry_msgs turtlesim)
 
-add_executable(turtle1_one_circle_node src/turtle1_one_circle_node.cpp)
-ament_target_dependencies(turtle1_one_circle_node rclcpp geometry_msgs turtlesim)
+add_executable(turtle1_circle_node src/turtle1_circle_node.cpp)
+ament_target_dependencies(turtle1_circle_node rclcpp geometry_msgs turtlesim)
+
+add_executable(turtle1_loop_node src/turtle1_loop_node.cpp)
+ament_target_dependencies(turtle1_loop_node rclcpp geometry_msgs turtlesim)
 
 install(TARGETS
-  turtle1_one_line_node
-  turtle1_one_circle_node
+  turtle1_line_node
+  turtle1_circle_node
+  turtle1_loop_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

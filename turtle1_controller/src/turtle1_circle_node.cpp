@@ -6,7 +6,7 @@ class TurtleOneLine : public rclcpp::Node
 {
 public:
   TurtleOneLine()
-  : Node("turtle_one_line")
+  : Node("turtle_circle")
   {
     publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 10);
     subscription_ = this->create_subscription<turtlesim::msg::Pose>(
