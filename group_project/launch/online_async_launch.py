@@ -11,6 +11,7 @@ def generate_launch_description():
     rviz_file = "gp_rviz.rviz"
     rviz_file_path = os.path.join(get_package_share_directory('group_project'), 'rviz', rviz_file)
     
+    print(get_package_share_directory('group_project'))
     use_sim_time = LaunchConfiguration('use_sim_time')
     slam_params_file = LaunchConfiguration('slam_params_file')
 
@@ -53,5 +54,5 @@ def generate_launch_description():
     ld.add_action(declare_slam_params_file_cmd)
     ld.add_action(start_async_slam_toolbox_node)
     ld.add_action(rviz_node)
-    ld.add_action(path_drawer_node)
+    # ld.add_action(path_drawer_node)
     return ld
