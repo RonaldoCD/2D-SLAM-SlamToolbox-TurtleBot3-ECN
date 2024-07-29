@@ -6,7 +6,7 @@ In this project, we utilized [SlamToolbox](https://github.com/SteveMacenski/slam
 
 The resulting map clearly demonstrates significant inaccuracies. However, these experiments provided valuable insights into the specific conditions under which the algorithm struggled and which parameters should be better tuned.
 
-![Alt text](path/to/your/image.png)
+![Alt text](https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/without_tunning.png)
 
 * Poor scan correlation accuracy during complex robot movements, fast turns and abrupt maneuvers caused significant inaccuracies in scan matching.
 * Error accumulation in feature-scarce areas. 
@@ -19,18 +19,18 @@ General parameter tuning involves adjusting settings influenced by the robot's s
 To tune these parameters, we conducted a series of small experiments where the robot followed simple trajectories such as straight lines, circles, and loops. This approach allowed us to ensure fast iteration in the tuning process while obtaining reliable results under various movement conditions.
 <table>
   <tr>
-    <td><img src="path/to/your/image1.png" alt="Image 1" width="300"></td>
-    <td><img src="path/to/your/image2.png" alt="Image 2" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/line_with_objects.png" alt="Image 1" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/line_without_objects.png" alt="Image 2" width="300"></td>
   </tr>
   <tr>
-    <td><img src="path/to/your/image3.png" alt="Image 3" width="300"></td>
-    <td><img src="path/to/your/image4.png" alt="Image 4" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/circle.png" alt="Image 3" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/one_loop.png" alt="Image 4" width="300"></td>
   </tr>
 </table>
 
 #### Results after general parameter tuning
 
-![Alt text](path/to/your/image.png)
+![Alt text](https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/after_general_params_tuning.jpg)
 
 The map generated for one of the rooms demonstrates significant improvement. However, due to incomplete loop closure settings, some areas that should overlap are misaligned.
 
@@ -69,7 +69,7 @@ By printing the computed values for the candidate chain size, covariance, and co
 
 In this example, a correct loop closure is identified which aligns the walls and obstables of the previous map.
 
-![Alt text](path/to/your/image.png)
+![Alt text](https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/after_loop_closure_tuning.jpg)
 
 ## Mapping Results
 
