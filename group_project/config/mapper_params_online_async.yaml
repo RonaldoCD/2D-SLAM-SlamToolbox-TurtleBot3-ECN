@@ -20,37 +20,37 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    #map_file_name: test_steve
-    # map_start_pose: [0.0, 0.0, 0.0]
+    # map_file_name: "/home/ronaldocd/Desktop/ros2_ws/src/slam/group_project/maps/lab_room"
+    # map_start_pose: [1.75, -7.0, 0.3926]
     #map_start_at_dock: true
 
     debug_logging: false
     throttle_scans: 1
     transform_publish_period: 0.02 #if 0 never publishes odometry
     map_update_interval: 5.0
-    resolution: 0.025
-    max_laser_range: 20.0 #for rastering images
+    resolution: 0.05
+    max_laser_range: 5. #for rastering images
     minimum_time_interval: 0.5
     transform_timeout: 0.2
     tf_buffer_duration: 30.
     stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
     enable_interactive_mode: true
-
+  
     # General Parameters
     use_scan_matching: true
     use_scan_barycenter: true
     minimum_travel_distance: 0.25
-    minimum_travel_heading: 0.14
-    scan_buffer_size: 80
-    scan_buffer_maximum_scan_distance: 20.0
+    minimum_travel_heading: 0.5             #in radians
+    scan_buffer_size: 28
+    scan_buffer_maximum_scan_distance: 7.
     link_match_minimum_response_fine: 0.8
-    link_scan_maximum_distance: 10.0
-    loop_search_maximum_distance: 4.0
-    do_loop_closing: true 
-    loop_match_minimum_chain_size: 10           
-    loop_match_maximum_variance_coarse: 0.63 
-    loop_match_minimum_response_coarse: 0.8  
-    loop_match_minimum_response_fine: 0.8
+    link_scan_maximum_distance: 10.
+    loop_search_maximum_distance: 4.
+    do_loop_closing: true
+    loop_match_minimum_chain_size: 3
+    loop_match_maximum_variance_coarse: 0.3   # gets squared later
+    loop_match_minimum_response_coarse: 0.5
+    loop_match_minimum_response_fine: 0.5
 
     # Correlation Parameters - Correlation Parameters
     correlation_search_space_dimension: 0.3
@@ -63,12 +63,11 @@ slam_toolbox:
     loop_search_space_smear_deviation: 0.03
 
     # Scan Matcher Parameters
-    distance_variance_penalty: 0.54  
-    angle_variance_penalty: 0.58  
-
-    fine_search_angle_offset: 0.00349     
-    coarse_search_angle_offset: 0.349   
-    coarse_angle_resolution: 0.0349        
+    distance_variance_penalty: 0.3      # gets squared later
+    angle_variance_penalty: 0.349       # in degrees (gets converted to radians then squared)
+    fine_search_angle_offset: 0.00349   # in degrees (gets converted to radians)
+    coarse_search_angle_offset: 0.349   # in degrees (gets converted to radians)
+    coarse_angle_resolution: 0.0349     # in degrees (gets converted to radians)
     minimum_angle_penalty: 0.9
     minimum_distance_penalty: 0.5
-    use_response_expansion: true
+    use_response_expansion: false

@@ -61,7 +61,7 @@ private:
 
     void odom_subs_callback(const Odometry::SharedPtr msg)
     {
-        if (odom_ctr % 20 == 0){
+        if (odom_ctr % 1 == 0){
             PoseStamped odom_pose_msg;
             odom_pose_msg.header.frame_id = "map";
             odom_pose_msg.pose.position.x = msg->pose.pose.position.x;
