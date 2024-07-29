@@ -63,7 +63,7 @@ The `TryCloseLoop` function performs the following steps to identify and confirm
 
 By printing the computed values for the candidate chain size, covariance, and coarse and fine responses to the terminal, we were able to tune the parameters effectively in order to generate loop closures where they were expected and avoid undesired ones. 
 
-![Alt text](path/to/your/image.png)
+![Alt text](https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/terminal.png)
 
 #### Results of Loop Closure Parameter Tuning
 
@@ -77,14 +77,17 @@ We recorded a ROS2 bag file for each room. Using the functionalities of SlamTool
 
 <table>
   <tr>
-    <td><img src="path/to/your/image1.png" alt="Image 1" width="300"></td>
-    <td><img src="path/to/your/image2.png" alt="Image 2" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/labRoom03.png" alt="Image 1" width="300"></td>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/labRoom02_FromWithoutDataFile.png" alt="Image 2" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/labRoom01_03.png" alt="Image 1" width="300"></td> 
   </tr>
 </table>
 
-![Alt text](path/to/your/image.png)
+### Final Map
 
-![Alt text](path/to/your/image.png)
+![Alt text](https://github.com/RonaldoCD/slam_group_project_ecn/blob/main/group_project/imgs/labRoom.jpg)
 
 https://github.com/user-attachments/assets/b1e987fc-6042-4b13-85b0-baf47fd0ea3d
 
